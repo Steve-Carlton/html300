@@ -1,3 +1,26 @@
-.main {
-    padding: 2rem
+* {
+  box-sizing: content-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: ghostwhite;
+}
+
+h1 {
+  padding: 2rem
+}
+
+section {
+  padding: 1rem;
+  padding-left: 3rem;
+}
+
+main {
+  background: silver;
+}
+
+main section:nth-child(3), main section:nth-child(7)  {
+  background: gainsboro;
 }

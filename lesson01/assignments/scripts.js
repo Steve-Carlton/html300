@@ -68,28 +68,64 @@ $(function() {
     includesSubmit = $('.includesSubmit'),
     includesResult = $('.includesResult');
 
-//BEGIN FUNCTION -- button event listener
-includesSubmit.on('click',  function() {
+  //BEGIN FUNCTION -- button event listener
+  includesSubmit.on('click', function() {
 
-  //make userEntry lowercase
-  let userAnswer = userEntry.val().toLowerCase();
+    //make userEntry lowercase
+    let userAnswer = userEntry.val().toLowerCase();
 
-  //set answer
-  const correctAnswer = 'world';
+    //set answer
+    const correctAnswer = 'world';
 
-  //Add userEntry to myArray
-  includesArray.push(userAnswer);
+    //Add userEntry to myArray
+    includesArray.push(userAnswer);
 
-  //Evaluate myArray for correctAnswer
-  if (includesArray.includes(correctAnswer)) {
-    includesResult.text(''); //clear previous result from html
-    console.log('Correct!');
-    includesArray.pop(correctAnswer); //reset myArray
-    includesResult.text('Correct!');
-  } else {
-    includesResult.text(''); //clear previous result from html
-    console.log('Sad trombone. Try again.')
-    includesResult.text('Sad trombone. Try again.'); //updated text in html.
-  }
+    //Evaluate myArray for correctAnswer
+    if (includesArray.includes(correctAnswer)) {
+      includesResult.text(''); //clear previous result from html
+      console.log('Correct!');
+      includesArray.pop(correctAnswer); //reset myArray
+      includesResult.text(' Correct!');
+    } else {
+      includesResult.text(''); //clear previous result from html
+      console.log('Sad trombone. Try again.')
+      includesResult.text(' Sad trombone. Try again.'); //updated text in html.
+    }
+  });
 });
+
+//METHOD 4 .every
+//Put everyUserEntry value into everyArray. Evaluate everyArray with modulo condition. Output result.
+$(function() {
+  let everyArray = [2, 10, 22, 8],
+    everyUserEntry = $('.everyUserEntry'),
+    everySubmit = $('.everySubmit'),
+    everyResult = $('.everyResult');
+
+  //BEGIN FUNCTION -- button event listener
+  everySubmit.on('click', function() {
+    //Reset everyArray
+    let everyArray = [2, 10, 22, 8];
+
+    //Parse everyUserEntry to data type number. Assign variable to userInput
+    const userValue = everyUserEntry.val();
+    const userInput = parseInt(userValue);
+
+    //Add userInput to everyArray
+    everyArray.push(userInput);
+
+    console.log(everyArray);
+
+    //Evaluate array with .every method. If array contains only even numbers, function evenNumbersOnly returns boolean 'true'. Otherwise, 'false'.
+    let evenNumbersOnly = everyArray.every(function(x) {
+      return (x % 2 === 0);
+    });
+
+    //Output displays to html
+    if (evenNumbersOnly === true) {
+      everyResult.text(' Well done!');
+    } else {
+      everyResult.text(' D\'oh! Try again... :\(');
+    }
+  });
 });

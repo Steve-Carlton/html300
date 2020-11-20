@@ -1,48 +1,58 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Assignment 1 - Part 2 Example</title>
-    <!-- jQuery CDN -->
-    <script
-        src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous">
-    </script>
-    <!-- Local Files -->
-    <script src="scripts.js"></script>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assignment 1 - Part 2 Example</title>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+  </script>
+  <!-- Local Files -->
+  <script src="scripts.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <main class="main">
-        <h1>Using ES6+ Methods</h1>
-
-        <!-- METHOD 1 -->
-        <section class="input-set">
-          <h4>Enter a number to add to 10.</h4>
-          <!-- Input -->
-          <input type="number" class="input">
-          <!-- Submit for Input -->
-          <input class="submit" type="submit">
-          <!-- Result markup with hook for answer -->
-          <p class="markup">The total with .reduce method is now: <span class="sum"></span></p>
-        </section>
-        <hr>
-        <!-- METHOD 2 -->
-        <section>
-          <h4>Enter a number greater than 5.</h4>
-          <input type="number" class="someInput">
-          <input class="someSubmit" type="submit">
-          <p class="someResult"></p>
-
-
-        </section>
-
-
-    </main>
+  <h1>Using ES6+ Methods</h1>
+  <main class="main">
+    <!-- METHOD 1 -->
+    <section class="input-set">
+      <h4>Enter a number to add to 10.</h4>
+      <!-- Input -->
+      <input type="number" class="input">
+      <!-- Submit for Input -->
+      <input class="submit" type="submit">
+      <!-- Result markup with hook for answer -->
+      <p class="markup">The total with .reduce method is now: <span class="sum"></span></p>
+    </section>
+    <hr>
+    <!-- METHOD 2 -->
+    <section>
+      <h4>Enter a number greater than 5.</h4>
+      <input type="number" class="someInput">
+      <input class="someSubmit" type="submit">
+      <p>The .some method evaluates: <span class="someResult"></span></p>
+    </section>
+    <hr>
+    <!-- METHOD 3 -->
+    <section>
+      <h4>A common test phrase when writing code is: “Hello _____!”</h4>
+      <input type="text" class="userEntry">
+      <input class="includesSubmit" type="submit">
+      <p> The .includes method evaluates:<span class="includesResult"></span></p>
+    </section>
+    <hr>
+    <!-- METHOD 4 -->
+    <section>
+      <h4>Enter a number that would belong in the group below.<br><em>2, 10, 22, 8...</em></h4>
+      <input type="number" class="everyUserEntry">
+      <input class="everySubmit" type="submit">
+      <p>The .every method evaluates: <span class="everyResult"></span> </p>
+    </section>
+    <hr>
+  </main>
 </body>
 
 </html>
