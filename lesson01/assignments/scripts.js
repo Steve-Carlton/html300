@@ -1,5 +1,5 @@
 // jQuery Doc Ready
-
+//This additional comment line added for new Test-Branch
 //METHOD 1 .reduce
 $(function() { // <--?
   // Set up some data and variables
