@@ -12,6 +12,83 @@ html {
     padding: 2rem;
 }
 
-h1 {
-    color: $red;  
+h1, h2, h3, h4, span {
+    color: $charcoal;
+}
+
+h3, h4 {
+ display: inline;
+ line-height: 2.5rem;
+}
+
+h2, h4 {
+  font-weight: 300;
+}
+
+h2 {
+  font-style: italic;
+}
+
+.card {
+&__container {
+  background-color: $gray;
+  // height: 400px;
+  // width: 800px;
+  border: 1px solid $slate;
+  border-radius: 5px;
+  padding: 3rem;
+}
+  &__entry {
+    // border: 2px solid green;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    background-color: $white;
+  }
+
+  &__indentity {
+    height: 50%;
+    text-align: center;
+    padding: 1rem;
+  & img {
+    border-radius: 50%;
+    max-width: 75%;
+    min-width: 100px;
+    }
+  }
+}
+
+section {
+  width: 33%;
+}
+
+aside {
+  background-color: $gray;
+  width: auto;
+  padding: 2rem;
+  margin: 2rem auto 2rem 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0 0; 
+}
+
+.icon {
+    border-radius: 0%;
+    height: 35px;
+    width: 35px;
+  }
+
+
+span {
+  padding-left: .5rem;
 }
