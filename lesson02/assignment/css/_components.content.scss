@@ -72,21 +72,21 @@ h2 {
   }
 }
 
-aside {
+.card {
+  &__profile {
   background-color: $gray;
   margin: 0;
   padding: 0.5rem 2rem 2rem;
   flex-grow: 3;
+  }
+  &__list {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    padding: 0;
+    list-style: none;
+    padding-inline-start: 0;
+  }
 }
-
-ul {
-  margin-top: 4%;
-  margin-bottom: 4%;
-  padding: 0;
-  list-style: none;
-  padding-inline-start: 0;
-}
-
 // ========PERSON URL========
 .contact {
   display: flex;
@@ -173,6 +173,8 @@ ul {
   h3, h4, .contact span {
     font-size: 75%;
     line-height: 1.5rem;
-    padding-left: 0;
+  }
+  .contact span {
+    padding-left: .25rem;
   }
 }
