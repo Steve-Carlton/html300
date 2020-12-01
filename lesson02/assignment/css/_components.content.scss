@@ -108,19 +108,44 @@ span {
 // MEDIA QUERIES
 // =====================
 
-@media screen and (max-width: 781px) {
+@media screen and (max-width: 780px) {
 //mobile sizes — vertical orientation
   .card {
     &__entry {
+      flex-flow: column;
       justify-content: center;
     }
-    &__identity {
-      margin: 0;
-    }
+
     &__profile {
       margin-top: 1rem;
     }
   }
+}
 //scale elements down for smaller mobile devices
+@media screen and (max-width: 499px) {
+  .main {
+    padding: 0.2rem;
+  }
+  .card {
+  &__container {
+    padding: 1rem;
+  }
+  &__entry {
+    padding: 1rem;
+    width: auto;
+  }
+  &__identity {
+    width: 90%;
+    margin: 0;
+  }
+  }
 
+//linkedin logo and URL
+  .contact {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .contact span {
+        margin-top: 1rem;
+  }
 }
