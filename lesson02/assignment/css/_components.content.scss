@@ -1,15 +1,15 @@
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *:after,
 *:before {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 .main {
-    padding: 2rem;
+  padding: 2rem;
 }
 
 h1 {
@@ -17,18 +17,22 @@ h1 {
   margin-top: 2rem;
 }
 
-
-
-h1, h2, h3, h4, span {
-    color: $charcoal;
+h1,
+h2,
+h3,
+h4,
+span {
+  color: $charcoal;
 }
 
-h3, h4 {
- display: inline;
- line-height: 2.5rem;
+h3,
+h4 {
+  display: inline;
+  line-height: 2.5rem;
 }
 
-h2, h4 {
+h2,
+h4 {
   font-weight: 300;
 }
 
@@ -39,14 +43,14 @@ h2 {
 }
 
 .card {
-&__container {
-  background-color: $gray;
-  border: 1px solid $slate;
-  border-radius: 5px;
-  padding: 3rem;
-}
+  &__container {
+    background-color: $gray;
+    border: 1px solid $slate;
+    border-radius: 5px;
+    padding: 3rem;
+  }
+
   &__entry {
-    border: 2px solid green;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -55,36 +59,24 @@ h2 {
   }
 
   &__identity {
-    // border: 2px solid blue;
     padding: 0;
-    margin: 0;
-    margin-right: 2rem;
-    // width: 30%;
+    margin: 0 2rem 0 0;
     text-align: center;
-  & img {
-    border-radius: 50%;
-    width: auto;
-    // height: auto;
-    max-width: 220px;
-    min-width: 200px;
+
+    & img {
+      border-radius: 50%;
+      width: auto;
+      max-width: 220px;
+      min-width: 200px;
     }
-
   }
-}
-
-.nametag {
-  // width: 33%;
 }
 
 aside {
   background-color: $gray;
   margin: 0;
-  padding: .5rem 2rem 2rem;
+  padding: 0.5rem 2rem 2rem;
   flex-grow: 3;
-  // width: auto;
-
-
-  // margin-left: 1rem;
 }
 
 ul {
@@ -95,8 +87,7 @@ ul {
   padding-inline-start: 0;
 }
 
-li h3 {
-}
+li h3 {}
 
 .contact {
   display: flex;
@@ -105,12 +96,31 @@ li h3 {
 }
 
 .icon {
-    border-radius: 0%;
-    height: 35px;
-    width: 35px;
-  }
-
+  border-radius: 0;
+  height: 35px;
+  width: 35px;
+}
 
 span {
-  padding-left: .5rem;
+  padding-left: 0.5rem;
+}
+
+// MEDIA QUERIES
+// =====================
+
+@media screen and (max-width: 781px) {
+//mobile sizes — vertical orientation
+  .card {
+    &__entry {
+      justify-content: center;
+    }
+    &__identity {
+      margin: 0;
+    }
+    &__profile {
+      margin-top: 1rem;
+    }
+  }
+//scale elements down for smaller mobile devices
+
 }
